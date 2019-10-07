@@ -27,7 +27,8 @@ import skimage.morphology as morphology
 from coastsat import SDS_preprocess, SDS_tools
 
 np.seterr(all='ignore') # raise/ignore divisions by 0 and nans
-
+os.environ['HTTP_PROXY'] = 'http://127.0.0.1:7890'
+os.environ['HTTPS_PROXY'] = 'http://127.0.0.1:7890'
 
 def download_tif(image, polygon, bandsId, filepath):
     """
